@@ -1,0 +1,67 @@
+﻿
+    <div class="mws-panel grid_8">
+        <div class="mws-panel-header">
+            <span>{{action}} Medicamento</span>
+        </div>
+        <div class="mws-panel-body no-padding">
+            <form class="mws-form" name="form" novalidate ng-submit="submit()">
+                <div class="mws-form-inline">
+
+                    <div class="mws-form-row" ng-class="{error: form.Nombre.$invalid}">
+                        <label class="mws-form-label">Nombre</label>
+                        <div class="mws-form-item">
+                            <input type="text" ng-model="medicamento.Nombre" class="large" required name="Nombre">
+                        </div>
+                    </div>
+
+                    <div class="mws-form-row" ng-class="{error: form.Descripcion.$invalid}">
+                        <label class="mws-form-label">Descripcion</label>
+                        <div class="mws-form-item">
+                            <input type="text" ng-model="medicamento.Descripcion" class="large" name="Descripcion">
+                        </div>
+                    </div>
+
+                    <div class="mws-form-row" ng-class="{error: form.Especificaciones.$invalid}">
+                        <label class="mws-form-label">Especificaciones</label>
+                        <div class="mws-form-item">
+                            <textarea ng-model="medicamento.Especificaciones" class="large" name="Especificaciones"></textarea>
+                        </div>
+                    </div>  
+
+                    <div class="mws-form-row" ng-class="{error: form.Existencia.$invalid}">
+                        <label class="mws-form-label">Existencia</label>
+                        <div class="mws-form-item">
+                            <input type="number" ng-model="medicamento.Existencia" required class="large" name="Existencia">
+                        </div>
+                    </div>
+
+                    <div class="mws-form-row" ng-class="{error: form.PrecioVenta.$invalid}">
+                        <label class="mws-form-label">Precio Venta</label>
+                        <div class="mws-form-item">
+                            <input type="number" ng-model="medicamento.PrecioVenta" required class="large" name="PrecioVenta">
+                        </div>
+                    </div>
+
+                    <div class="mws-form-row" ng-class="{error: form.CodigoMedicamentoPresentacion.$invalid}">
+                        <label class="mws-form-label">Presentacion</label>
+                        <div class="mws-form-item">
+                            <select ng-model="medicamento.CodigoMedicamentoPresentacion"
+                                    ng-options="medicamentopresentacion.CodigoMedicoPresentacion as medicamentopresentacion.Nombre for medicamentopresentacion in medicamentopresentaciones"
+                                    required
+                                    class="large"
+                                    name="CodigoMedicamentoPresentacion">
+                                <option value="">Seleccione un tipo de presentacion</option>
+                            </select>
+                           <!--<input type="hidden" name="CodigoMedicamentoPresentacion" ng-model="medicamento.CodigoMedicamentoPresentacion" ng-value="{{selectMedicamentoPresentacion}}" />-->
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="mws-button-row">
+                    <button type="submit" ng-click="save(medicamento)" ng-disabled="form.$invalid" class="btn btn-danger">{{action}}</button>
+                    <a href="#/medicamento" class="btn btn-default">Regresar <i class="glyphicon glyphicon-arrow-left"></i></a>
+                </div>
+            </form>
+        </div>
+    </div>

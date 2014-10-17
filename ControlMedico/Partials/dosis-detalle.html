@@ -1,0 +1,24 @@
+﻿
+    <div class="mws-panel grid_8">
+        <div class="mws-panel-header">
+            <span>{{action}} Unidad Tiempo</span>
+        </div>
+        <div class="mws-panel-body no-padding">
+            <form class="mws-form" name="form" novalidate>
+                <div class="mws-form-inline">
+
+                    <div class="mws-form-row" ng-class="'error':form.Descripcion.$invalid}">
+                        <label class="mws-form-label">Unidad Tiempo</label>
+                        <div class="mws-form-item">
+                            <input type="text" ng-model="unidadtiempo.Descripcion" required class="large" name="Descripcion">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mws-button-row">
+                    <button ng-click="save(unidadtiempo)" ng-disabled="form.$invalid" class="btn btn-danger">{{action}}</button>
+                    <a href="#/unidadtiempo" class="btn btn-default">Regresar <i class="glyphicon glyphicon-arrow-left"></i></a>
+                </div>
+            </form>
+        </div>
+    </div>

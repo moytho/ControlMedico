@@ -1,0 +1,41 @@
+﻿
+    <div class="mws-panel grid_8">
+        <div class="mws-panel-header">
+            <span>{{action}} Proveedor</span>
+        </div>
+        <div class="mws-panel-body no-padding">
+            <form class="mws-form" name="form" novalidate>
+                <div class="mws-form-inline">
+
+                    <div class="mws-form-row" ng-class="{error: form.Nombre.$invalid}">
+                        <label class="mws-form-label">Nombre</label>
+                        <div class="mws-form-item">
+                            <input type="text" ng-model="proveedor.Nombre" class="large" required name="Nombre">
+                        </div>
+                    </div>
+
+                    <div class="mws-form-row" ng-class="{error: form.Empresa.$invalid}">
+                        <label class="mws-form-label">Empresa</label>
+                        <div class="mws-form-item">
+                            <input type="text" ng-model="proveedor.Empresa" class="large" name="Empresa">
+                        </div>
+                    </div>
+
+                    <div class="mws-form-row" ng-class="{error: form.Telefono.$invalid}">
+                        <label class="mws-form-label">Telefono</label>
+                        <div class="mws-form-item">
+                            <input type="text" ng-model="proveedor.Telefono" class="large" name="Telefono">
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <div class="mws-button-row">
+                    <button type="submit" ng-click="save(proveedor)" ng-disabled="form.$invalid" class="btn btn-danger">{{action}}</button>
+                    <a href="#/proveedor" class="btn btn-default">Regresar <i class="glyphicon glyphicon-arrow-left"></i></a>
+                </div>
+            </form>
+        </div>
+    </div>

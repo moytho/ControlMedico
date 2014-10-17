@@ -1,0 +1,24 @@
+﻿
+    <div class="mws-panel grid_8">
+        <div class="mws-panel-header">
+            <span>{{action}} Unidad Medida</span>
+        </div>
+        <div class="mws-panel-body no-padding">
+            <form class="mws-form" name="form" novalidate>
+                <div class="mws-form-inline">
+
+                    <div class="mws-form-row" ng-class="{error: form.Descripcion.$invalid}">
+                        <label class="mws-form-label">Unidad Medida</label>
+                        <div class="mws-form-item">
+                            <input type="text" ng-model="unidadmedida.Descripcion" required class="large" name="Descripcion">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mws-button-row">
+                    <button type="submit" ng-disabled="form.$invalid" ng-click="save(unidadmedida)" class="btn btn-danger">{{action}}</button>
+                    <a href="#/unidadmedida" class="btn btn-default">Regresar <i class="glyphicon glyphicon-arrow-left"></i></a>
+                </div>
+            </form>
+        </div>
+    </div>

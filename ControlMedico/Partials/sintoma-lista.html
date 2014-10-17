@@ -1,0 +1,58 @@
+﻿<div class="mws-panel grid_8 mws-collapsible">
+    <div class="mws-panel-header">
+        <span><i class="icon-table"></i> {{titulo}}</span>
+        
+    </div>
+    <div class="mws-panel-inner-wrap">
+        <div class="mws-panel-body no-padding">
+            <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper" role="grid">
+                <div id="DataTables_Table_0_length" class="dataTables_length"></div>
+                    <div class="dataTables_filter" id="DataTables_Table_0_filter">
+                        <label>Buscar: <input type="text" ng-model="query" aria-controls="DataTables_Table_0"></label>
+                        <button type="submit" ng-click="reset();" ng-disabled="!query" class="btn">Buscar</button>
+                        <button type="submit" ng-click="query='';reset()" ng-disabled="!query" class="btn">Limpiar</button>
+                    </div>
+                <table class="mws-table mws-datatable dataTable" id="DataTables_Table_0" aria-describedby="DataTables_Table_0_info">
+                    <thead>
+                      <tr>
+                        <th>
+                            <a ng-click="sort('CodigoSintoma');">Codigo</a>
+                            <span ng-show="sort_order=='CodigoSintoma' && is_desc==true"><i class="glyphicon glyphicon-arrow-down"></i></span>
+                            <span ng-show="sort_order=='CodigoSintoma' && is_desc==false"><i class="glyphicon glyphicon-arrow-up"></i></span>
+                        </th>
+                        <th>
+                            <a ng-click="sort('Nombre');">Nombre</a>
+                            <span ng-show="sort_order=='Nombre' && is_desc==true"><i class="glyphicon glyphicon-arrow-down"></i></span>
+                            <span ng-show="sort_order=='Nombre' && is_desc==false"><i class="glyphicon glyphicon-arrow-up"></i></span>
+                        </th>
+                        
+                        <th><span class="btn-group">
+                                <a href="#/sintoma/nuevo" class="btn btn-small"><i class="icon-add-contact"></i></a>
+                            </span></th>
+                      </tr>
+                    </thead>
+
+                    <tbody role="alert" aria-live="polite" aria-relevant="all">
+                        
+                        <tr ng-repeat="sintoma in sintomas" id="sintoma_{{sintoma.CodigoSintoma}}">
+                            <td>{{sintoma.CodigoSintoma}}</td>
+                            <td>{{sintoma.Nombre}}</td>
+                            <td>
+                                <span class="btn-group">
+                                    <a href="#/sintoma/editar/{{sintoma.CodigoSintoma}}" class="btn btn-small"><i class="icon-pencil"></i></a>
+                                    <a ng-click="delete()" class="btn btn-small"><i class="icon-trash"></i></a>
+                                </span>
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                <div class="dataTables_info"><!--Showing 1 to 10 of 20 entries--></div>
+                <div class="dataTables_paginate paging_two_button" id="DataTables_Table_0_paginate">
+                    <!--<a class="paginate_disabled_previous"role="button">Previous</a>-->
+                    <a class="paginate_enabled_next" role="button" ng-show="has_more()" ng-click="show_more()">Next</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

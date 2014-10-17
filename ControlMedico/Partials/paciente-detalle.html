@@ -1,0 +1,122 @@
+﻿
+    <div class="mws-panel grid_8">
+        <div class="mws-panel-header">
+            <span>{{action}} Paciente</span>
+        </div>
+        <div class="mws-panel-body no-padding">
+            <form class="mws-form" name="form" novalidate ng-submit="submit()">
+                <div class="mws-form-inline">
+
+                    <div class="mws-form-row" ng-class="{error: form.PrimerNombre.$invalid}">
+                        <label class="mws-form-label">Primer Nombre</label>
+                        <div class="mws-form-item">
+                            <input type="text" ng-model="paciente.PrimerNombre" class="large" required name="PrimerNombre">
+                        </div>
+                    </div>
+
+                    <div class="mws-form-row" ng-class="{error: form.SegundoNombre.$invalid}">
+                        <label class="mws-form-label">Segundo Nombre</label>
+                        <div class="mws-form-item">
+                            <input type="text" ng-model="paciente.SegundoNombre" class="large" name="SegundoNombre">
+                        </div>
+                    </div>
+
+                    <div class="mws-form-row" ng-class="{error: form.PrimerApellido.$invalid}">
+                        <label class="mws-form-label">Primer Apellido</label>
+                        <div class="mws-form-item">
+                            <input type="text" ng-model="paciente.PrimerApellido" class="large" required name="PrimerApellido">
+                        </div>
+                    </div>
+
+                    <div class="mws-form-row" ng-class="{error: form.SegundoApellido.$invalid}">
+                        <label class="mws-form-label">Segundo Apellido</label>
+                        <div class="mws-form-item">
+                            <input type="text" ng-model="paciente.SegundoApellido" class="large" name="SegundoApellido">
+                        </div>
+                    </div>
+
+                    <div class="mws-form-row" ng-class="{error: form.ApellidoCasada.$invalid}">
+                        <label class="mws-form-label">Apellido Casada</label>
+                        <div class="mws-form-item">
+                            <input type="text" ng-model="paciente.ApellidoCasada" class="large" name="ApellidoCasada">
+                        </div>
+                    </div>
+
+                    <div class="mws-form-row" ng-class="{error: form.Direccion.$invalid}">
+                        <label class="mws-form-label">Direccion</label>
+                        <div class="mws-form-item">
+                            <input type="text" ng-model="paciente.Direccion" class="large" name="Direccion">
+                        </div>
+                    </div>
+
+                    <div class="mws-form-row" ng-class="{error: form.TelefonoCasa.$invalid}">
+                        <label class="mws-form-label">Telefono Casa</label>
+                        <div class="mws-form-item">
+                            <input type="text" ng-model="paciente.TelefonoCasa" class="large" name="TelefonoCasa">
+                        </div>
+                    </div>
+
+                    <div class="mws-form-row" ng-class="{error: form.TelefonoMovil.$invalid}">
+                        <label class="mws-form-label">Telefono Movil</label>
+                        <div class="mws-form-item">
+                            <input type="text" ng-model="paciente.TelefonoMovil" class="large" name="TelefonoMovil">
+                        </div>
+                    </div>
+
+                    <div class="mws-form-row" ng-class="{error: form.FechaNacimiento.$invalid}">
+                        <label class="mws-form-label">Fecha Nacimiento</label>
+                        <div class="mws-form-item">
+                            <input type="text" ng-model="paciente.FechaNacimiento" required class="mws-datepicker hasDatepicker large" name="FechaNacimiento">
+                        </div>
+                    </div>
+
+                    
+
+                    <div class="mws-form-row" ng-class="{error: form.CodigoGenero.$invalid}">
+                        <label class="mws-form-label">Genero</label>
+                        <div class="mws-form-item">
+                            <select ng-model="paciente.CodigoGenero"
+                                    ng-options="genero.CodigoGenero as genero.Descripcion for genero in generos"
+                                    required
+                                    class="large"
+                                    name="CodigoGenero">
+                                <option value="">Seleccione un genero</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="mws-form-row" ng-class="{error: form.CodigoEstadoCivil.$invalid}">
+                        <label class="mws-form-label">Estado Civil</label>
+                        <div class="mws-form-item">
+                            <select ng-model="paciente.CodigoEstadoCivil"
+                                    ng-options="estadocivil.CodigoEstadoCivil as estadocivil.Descripcion for estadocivil in estadociviles"
+                                    class="large"
+                                    required
+                                    name="CodigoEstadoCivil">
+                                <option value="">Seleccione un estado civil</option>
+                            </select>
+                        </div>
+                        </div>
+
+                        <div class="mws-form-row" ng-class="{error: form.CodigoTipoSangre.$invalid}">
+                            <label class="mws-form-label">Tipo Sangre</label>
+                            <div class="mws-form-item">
+                                <select ng-model="paciente.CodigoTipoSangre"
+                                        ng-options="tiposangre.CodigoTipoSangre as tiposangre.Descripcion for tiposangre in tiposangres"
+                                        class="large"
+                                        name="CodigoTipoSangre">
+                                    <option value="">Seleccione un tipo de sangre</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+
+                <div class="mws-button-row">
+                    <button type="submit" ng-click="save(paciente)" ng-disabled="form.$invalid" class="btn btn-danger">{{action}}</button>
+                    <a href="#/paciente" class="btn btn-default">Regresar <i class="glyphicon glyphicon-arrow-left"></i></a>
+                </div>
+
+            </form>
+        </div>
+    </div>

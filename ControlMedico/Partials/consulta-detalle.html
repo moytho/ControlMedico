@@ -1,0 +1,63 @@
+﻿
+    <div class="mws-panel grid_8">
+        <div class="mws-panel-header">
+            <span>{{action}} Cita</span>
+        </div>
+        <div class="mws-panel-body no-padding">
+            <form class="mws-form" name="form" novalidate>
+                <div class="mws-form-inline">
+
+                    
+                    <!--AUTOCOMPLETE-->
+                    <div class="mws-form-row" ng-class="{error: form.CodigoPaciente.$invalid}">
+                        <label class="mws-form-label">Paciente</label>
+                        <div class="mws-form-item">
+                            <input type="text" ng-model="consulta.CodigoPaciente" class="large" required name="CodigoPaciente">
+                        </div>
+                    </div>
+
+                    <div class="mws-form-row" ng-class="{error: form.FechaConsulta.$invalid}">
+                        <label class="mws-form-label">Fecha</label>
+                        <div class="mws-form-item">
+                            <input type="date" ng-model="consulta.Nombres" class="large" required name="FechaConsulta">
+                        </div>
+                    </div>
+
+                    <div class="mws-form-row" ng-class="{error: form.HoraConsulta.$invalid}">
+                        <label class="mws-form-label">Hora</label>
+                        <div class="mws-form-item">
+                            <input type="time" ng-model="consulta.HoraConsulta" class="large" required name="HoraConsulta">
+                        </div>
+                    </div>
+
+                    <div class="mws-form-row" ng-class="{error: form.CodigoMedico.$invalid}">
+                        <label class="mws-form-label">Medico</label>
+                        <div class="mws-form-item">
+                            <select ng-model="consulta.CodigoMedico"
+                                    ng-options="medico.CodigoMedico as medico.Nombres for medico in medicos"
+                                    required
+                                    class="large"
+                                    name="CodigoMedico">
+                                <option value="">Seleccione un Medico</option>
+                            </select>
+                            <!--<input type="hidden" name="CodigoMedicamentoPresentacion" ng-model="medicamento.CodigoMedicamentoPresentacion" ng-value="{{selectMedicamentoPresentacion}}" />-->
+                        </div>
+                    </div>
+
+                    <div class="mws-form-row" ng-class="{error: form.Observaciones.$invalid}">
+                        <label class="mws-form-label">Observaciones</label>
+                        <div class="mws-form-item">
+                            <textarea ng-model="consulta.Observaciones" class="large" name="Observaciones"></textarea>
+                        </div>
+                    </div> 
+
+
+                </div>
+
+                <div class="mws-button-row">
+                    <button type="submit" ng-click="save(consulta)" ng-disabled="form.$invalid" class="btn btn-danger">{{action}}</button>
+                    <a href="#/consulta" class="btn btn-default">Regresar <i class="glyphicon glyphicon-arrow-left"></i></a>
+                </div>
+            </form>
+        </div>
+    </div>

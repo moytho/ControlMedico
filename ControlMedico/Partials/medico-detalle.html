@@ -1,0 +1,32 @@
+﻿
+    <div class="mws-panel grid_8">
+        <div class="mws-panel-header">
+            <span>{{action}} Medico</span>
+        </div>
+        <div class="mws-panel-body no-padding">
+            <form class="mws-form" name="form" novalidate>
+                <div class="mws-form-inline">
+
+                    <div class="mws-form-row" ng-class="{error: form.Nombres.$invalid}">
+                        <label class="mws-form-label">Nombres</label>
+                        <div class="mws-form-item">
+                            <input type="text" ng-model="medico.Nombres" class="large" required name="Nombres">
+                        </div>
+                    </div>
+
+                    <div class="mws-form-row" ng-class="{error: form.Apellidos.$invalid}">
+                        <label class="mws-form-label">Apellidos</label>
+                        <div class="mws-form-item">
+                            <input type="text" ng-model="medico.Apellidos" class="large" required name="Apellidos">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="mws-button-row">
+                    <button type="submit" ng-click="save(medico)" ng-disabled="form.$invalid" class="btn btn-danger">{{action}}</button>
+                    <a href="#/medico" class="btn btn-default">Regresar <i class="glyphicon glyphicon-arrow-left"></i></a>
+                </div>
+            </form>
+        </div>
+    </div>

@@ -1,0 +1,277 @@
+﻿
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--><html lang="en" ng-app="controlMedico"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+
+<!-- Viewport Metatag -->
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<!-- Plugin Stylesheets first to ease overrides -->
+<!--<link rel="stylesheet" type="text/css" href="plugins/colorpicker/colorpicker.css" media="screen">-->
+<!--<link rel="stylesheet" type="text/css" href="custom-plugins/wizard/wizard.css" media="screen">-->
+
+<!-- Required Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="Content/bootstrap/css/bootstrap.min.css" media="screen">
+<link rel="stylesheet" type="text/css" href="Content/css/fonts/ptsans/stylesheet.css" media="screen">
+<link rel="stylesheet" type="text/css" href="Content/css/fonts/icomoon/style.css" media="screen">
+
+<link rel="stylesheet" type="text/css" href="Content/css/mws-style.css" media="screen">
+<link rel="stylesheet" type="text/css" href="Content/css/icons/icol16.css" media="screen">
+<link rel="stylesheet" type="text/css" href="Content/css/icons/icol32.css" media="screen">
+
+<!-- Demo Stylesheet -->
+<link rel="stylesheet" type="text/css" href="Content/css/demo.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="Scripts/plugins/fullcalendar/fullcalendar.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="Scripts/plugins/fullcalendar/fullcalendar.print.css" media="print">
+
+<!-- jQuery-UI Stylesheet -->
+<link rel="stylesheet" type="text/css" href="Scripts/jui/css/jquery.ui.all.css" media="screen">
+<link rel="stylesheet" type="text/css" href="Scripts/jui/jquery-ui.custom.css" media="screen">
+
+<!-- Theme Stylesheet -->
+<link rel="stylesheet" type="text/css" href="Content/css/mws-theme.css" media="screen">
+<link rel="stylesheet" type="text/css" href="Content/css/themer.css" media="screen">
+
+<title>Control Medico</title>
+
+</head>
+
+<body>
+
+
+	<!-- Header -->
+	<div id="mws-header" class="clearfix">
+    
+    	<!-- Logo Container -->
+    	<div id="mws-logo-container">
+        
+        	<!-- Logo Wrapper, images put within this wrapper will always be vertically centered -->
+        	<div id="mws-logo-wrap">
+            	<img src="Content/images/mws-logo.png" alt="mws admin">
+			</div>
+        </div>
+        
+        <!-- User Tools (notifications, logout, profile, change password) -->
+        <div id="mws-user-tools" class="clearfix">
+        
+        	<!-- Notifications -->
+        	<div id="mws-user-notif" class="mws-dropdown-menu">
+            	<a href="#" data-toggle="dropdown" class="mws-dropdown-trigger"><i class="icon-exclamation-sign"></i></a>
+                
+                <!-- Unread notification count -->
+                <span class="mws-dropdown-notif">2</span>
+                
+                <!-- Notifications dropdown -->
+                <div class="mws-dropdown-box">
+                	<div class="mws-dropdown-content">
+                        <ul class="mws-notifications">
+                        	<li class="read">
+                            	<a href="#">
+                                    <span class="message">
+                                        Promocion de la sextavalente
+                                    </span>
+                                    <span class="time">
+                                        Sep 21, 2014
+                                    </span>
+                                </a>
+                            </li>
+                        	<li class="read">
+                            	<a href="#">
+                                    <span class="message">
+                                        Promocion de Leche de formula
+                                    </span>
+                                    <span class="time">
+                                        Sep 22, 2014
+                                    </span>
+                                </a>
+                            </li>
+                        	
+                        	
+                        </ul>
+                        <div class="mws-dropdown-viewall">
+	                        <a href="#">Ver todas las promociones</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Messages -->
+            
+            
+            <!-- User Information and functions section -->
+            <div id="mws-user-info" class="mws-inset">
+            
+            	<!-- User Photo -->
+            	<div id="mws-user-photo">
+                	<img src="example/profile.jpg" alt="User Photo">
+                </div>
+                
+                <!-- Username and Functions -->
+                <div id="mws-user-functions">
+                    <div id="mws-username">
+                        Bienvenido, Usuario
+                    </div>
+                    <ul>
+                    	
+                        <li><a href="#/sesion">Sesion</a></li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Start Main Wrapper -->
+    <div id="mws-wrapper">
+    
+    	<!-- Necessary markup, do not remove -->
+		<div id="mws-sidebar-stitch"></div>
+		<div id="mws-sidebar-bg"></div>
+        
+        <!-- Sidebar Wrapper -->
+        <div id="mws-sidebar">
+        
+            <!-- Hidden Nav Collapse Button -->
+            <div id="mws-nav-collapse">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+        	<!-- Searchbox -->
+        	<div id="mws-searchbox" class="mws-inset">
+            	<form action="typography.html">
+                	<input type="text" class="mws-search-input" placeholder="Search...">
+                    <button type="submit" class="mws-search-submit"><i class="icon-search"></i></button>
+                </form>
+            </div>
+            
+            <!-- Main Navigation -->
+            <div id="mws-navigation">
+                <ul>
+                    <li class="active"><a href="#/paciente"><i class="icon-home"></i> Pacientes</a></li>
+                    <!--<li><a href="#/prescripcion"><i class="icon-graph"></i> Prescripcion</a></li>-->
+                    <li><a href="#/consulta"><i class="icon-calendar"></i>Cita</a></li>
+                    <li><a href="#/sintoma"><i class="icon-graph"></i> Sintomas</a></li>
+                    <li><a href="#/medico"><i class="icon-graph"></i> Medico</a></li>
+                    <li>
+                        <a href="#"><i class="icon-list"></i>Inventario</a>
+                        <ul class="closed">
+                            <li><a href="#/medicamento">Medicamentos</a></li>
+                            <li><a href="#/medicamentopresentacion">Tipo de Medicamentos</a></li>
+                            <li><a href="#/ingresomedicamento">Ingreso de medicamentos</a></li>
+                            <li><a href="#/proveedor">Proveedores</a></li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-list"></i> Datos Generales</a>
+                        <ul class="closed">
+                            <li><a href="#/tiposangre">Tipo Sangre</a></li>
+                            <li><a href="#/unidadtiempo">Unidad Tiempo/Dosis</a></li>
+                            <li><a href="#/unidadmedida">Unidad Medida/Dosificacion</a></li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-list"></i>Seguridad</a>
+                        <ul class="closed">
+                            <li><a href="#/usuario">Usuarios</a></li>
+                            <li><a href="#/tipousuario">Tipos de usuario</a></li>
+                            <li><a href="#/cambiarcontrasenia">Cambiar contrasenia</a></li>
+                            <li><a href="#/permiso">Permiso</a></li>
+                            <li><a href="#/rol">Roles</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+            </div>         
+        </div>
+        
+        <!-- Main Container Start -->
+        <div id="mws-container" class="clearfix">
+        
+        	<!-- Inner Container Start -->
+            <div class="container">
+                <div ng-view>
+
+
+                </div>
+            	<!-- Statistics Button Container -->
+            	<div class="mws-stat-container clearfix">
+                	
+                    <!-- Statistic Item -->
+                	
+
+                	
+
+                	
+                    
+                	
+                    
+                	
+                </div>
+                
+                <!-- Panels Start -->
+                
+            	
+                
+            	
+                <!-- Panels End -->
+            </div>
+            <!-- Inner Container End -->
+                       
+            <!-- Footer -->
+            <div id="mws-footer">
+            	Derechos Reservados Medical Clinic. CopyRight.
+            </div>
+            
+        </div>
+        <!-- Main Container End -->
+        
+    </div>
+
+    <!-- JavaScript Plugins -->
+    <script src="Scripts/js/libs/jquery-1.8.3.min.js"></script>
+    <script src="Scripts/js/libs/jquery.mousewheel.min.js"></script>
+    <script src="Scripts/js/libs/jquery.placeholder.min.js"></script>
+    <script src="Scripts/custom-plugins/fileinput.js"></script>
+    
+    <!-- jQuery-UI Dependent Scripts -->
+    <script src="Scripts/jui/js/jquery-ui-1.9.2.min.js"></script>
+    <script src="Scripts/jui/jquery-ui.custom.min.js"></script>
+    <script src="Scripts/jui/js/jquery.ui.touch-punch.js"></script>
+
+    <!-- Plugin Scripts -->
+    <script src="Scripts/plugins/datatables/jquery.dataTables.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="js/libs/excanvas.min.js"></script>
+    <![endif]-->
+
+    <script src="Scripts/plugins/fullcalendar/fullcalendar.min.js"></script>
+    <script src="Scripts/plugins/colorpicker/colorpicker-min.js"></script>
+    <script src="Scripts/plugins/validate/jquery.validate-min.js"></script>
+    <script src="Scripts/custom-plugins/wizard/wizard.min.js"></script>
+
+    <!-- Core Script -->
+    <script src="Content/bootstrap/js/bootstrap.min.js"></script>
+    <script src="Scripts/js/core/mws.js"></script>
+
+    <script src="Scripts/angular-1.2.26/angular.js"></script>
+    <script src="Scripts/angular-1.2.26/angular-route.js"></script>
+    <script src="Scripts/angular-1.2.26/angular-resource.js"></script>
+
+    <script src="Scripts/app.js"></script>
+    <script src="Scripts/controllers/controllers.js"></script>
+    <script src="Scripts/services/services.js"></script>
+    <script src="Scripts/directives/directives.js"></script>
+    <script src="Scripts/angular-1.2.26/i18n/angular-locale_es-gt.js"></script>
+    <script src="Scripts/demo/demo.calendar.js"></script>
+
+
+</body>
+</html>

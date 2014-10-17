@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="af1867ec962d4717911eb0e2c3087da5" Name="Diagram1" ZoomLevel="91">
+        <EntityTypeShape EntityType="ControlMedicoModel.Consulta" Width="1.5" PointX="3" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ControlMedicoModel.Dia" Width="1.5" PointX="3.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ControlMedicoModel.EstadoCivil" Width="1.5" PointX="1.5" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ControlMedicoModel.Genero" Width="1.5" PointX="1.5" PointY="18.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ControlMedicoModel.Ingreso" Width="1.5" PointX="13" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ControlMedicoModel.IngresoDetalle" Width="1.5" PointX="15.25" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ControlMedicoModel.Medicamento" Width="1.5" PointX="5.25" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ControlMedicoModel.MedicamentoPresentacion" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ControlMedicoModel.Medico" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ControlMedicoModel.MedicoHorario" Width="1.5" PointX="3" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ControlMedicoModel.MedicoHorarioRegular" Width="1.5" PointX="6" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ControlMedicoModel.Paciente" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ControlMedicoModel.Prescripcion" Width="1.5" PointX="5.25" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ControlMedicoModel.PrescripcionMedicamento" Width="1.5" PointX="7.5" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ControlMedicoModel.PrescripcionSintoma" Width="1.5" PointX="10.5" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ControlMedicoModel.Proveedor" Width="1.5" PointX="10.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ControlMedicoModel.ProveedorMedicamento" Width="1.5" PointX="13" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ControlMedicoModel.Sintoma" Width="1.5" PointX="8.25" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ControlMedicoModel.sysdiagram" Width="1.5" PointX="7.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ControlMedicoModel.TipoSangre" Width="1.5" PointX="1.5" PointY="20.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ControlMedicoModel.TipoUsuario" Width="1.5" PointX="1.5" PointY="24.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ControlMedicoModel.UnidadMedida" Width="1.5" PointX="5.25" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ControlMedicoModel.UnidadTiempo" Width="1.5" PointX="5.25" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="ControlMedicoModel.Usuario" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
+        <AssociationConnector Association="ControlMedicoModel.FK_Consulta_Medico" ManuallyRouted="false" />
+        <AssociationConnector Association="ControlMedicoModel.FK_Consulta_Paciente" ManuallyRouted="false" />
+        <AssociationConnector Association="ControlMedicoModel.FK_Consulta_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="ControlMedicoModel.FK_Prescripcion_Consulta" ManuallyRouted="false" />
+        <AssociationConnector Association="ControlMedicoModel.FK_MedicoHorarioRegular_Dia" ManuallyRouted="false" />
+        <AssociationConnector Association="ControlMedicoModel.FK_Paciente_EstadoCivil" ManuallyRouted="false" />
+        <AssociationConnector Association="ControlMedicoModel.FK_Paciente_Genero" ManuallyRouted="false" />
+        <AssociationConnector Association="ControlMedicoModel.FK_Ingreso_Proveedor" ManuallyRouted="false" />
+        <AssociationConnector Association="ControlMedicoModel.FK_Ingreso_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="ControlMedicoModel.FK_IngresoDetalle_Ingreso" ManuallyRouted="false" />
+        <AssociationConnector Association="ControlMedicoModel.FK_IngresoDetalle_Medicamento" ManuallyRouted="false" />
+        <AssociationConnector Association="ControlMedicoModel.FK_Medicamento_MedicamentoPresentacion" ManuallyRouted="false" />
+        <AssociationConnector Association="ControlMedicoModel.FK_PrescripcionMedicamentos_Medicamento" ManuallyRouted="false" />
+        <AssociationConnector Association="ControlMedicoModel.FK_ProveedorMedicamento_Medicamento" ManuallyRouted="false" />
+        <AssociationConnector Association="ControlMedicoModel.FK_MedicoHorario_Medico" ManuallyRouted="false" />
+        <AssociationConnector Association="ControlMedicoModel.FK_MedicoHorarioRegular_Medico" ManuallyRouted="false" />
+        <AssociationConnector Association="ControlMedicoModel.FK_Paciente_TipoSangre" ManuallyRouted="false" />
+        <AssociationConnector Association="ControlMedicoModel.FK_PrescripcionMedicamentos_Prescripcion" ManuallyRouted="false" />
+        <AssociationConnector Association="ControlMedicoModel.FK_PrescripcionSintomas_Prescripcion" ManuallyRouted="false" />
+        <AssociationConnector Association="ControlMedicoModel.FK_PrescripcionMedicamentos_UnidadMedida" ManuallyRouted="false" />
+        <AssociationConnector Association="ControlMedicoModel.FK_PrescripcionMedicamentos_UnidadTiempo" ManuallyRouted="false" />
+        <AssociationConnector Association="ControlMedicoModel.FK_PrescripcionSintomas_Sintoma" ManuallyRouted="false" />
+        <AssociationConnector Association="ControlMedicoModel.FK_ProveedorMedicamento_Proveedor" ManuallyRouted="false" />
+        <AssociationConnector Association="ControlMedicoModel.FK_Usuario_TipoUsuario" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
