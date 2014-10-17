@@ -2457,6 +2457,7 @@
     <Content Include="Content\css\fonts\ptsans\PIPMHY90P7jtyjpXuZ2cLD8E0i7KZn-EPnyo3HZu7kw.woff" />
     <Content Include="Content\css\icons\icol16\src\Thumbs.db" />
     <Content Include="Content\css\icons\icol32\Thumbs.db" />
+    <None Include="Properties\PublishProfiles\ControlMedico.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\controllers\controllers.js" />
     <Content Include="Scripts\custom-plugins\fileinput.js" />
